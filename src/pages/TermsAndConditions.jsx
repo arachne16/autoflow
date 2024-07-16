@@ -2,7 +2,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 export const TermsAndConditions = () => {
   return (
-    <div className="flex justify-between gap-12 mb-[204px] px-22">
+    <div className="flex justify-between gap-12 mb-[90px] px-22">
       <div className="max-w-[494px]">
         <SectionTitle text="// policies" />
         <p className="my-4 text-8xl font-medium leading-none -tracking-3.84">

@@ -29,12 +29,12 @@ export const Header = () => {
   return (
     <div className="fixed z-50 w-full top-0 left-0 h-56 px-9 header-bg">
       <div className="h-full flex items-center justify-between">
-        <div className="">
+        <Link to='/'>
           <img
             src={Logo}
             alt="header_logo"
           />
-        </div>
+        </Link>
         <div>
           <nav className='flex gap-40'>
             {

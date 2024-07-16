@@ -94,7 +94,7 @@ const Masks = ({
   }
   if(path == '/terms-and-conditions') {
     return (
-      <div className={`absolute top-[-100px] left-[-100px] w-full h-auto z-0 max-w-full  object-cover object-center overflow-hidden`} >
+      <div className={`absolute top-[-100px] left-[-100px] w-full h-auto z-0 max-w-full max-h-[${height}px] object-cover object-center overflow-hidden`} >
         <img
           src={Mask6}
           alt="mask_6"
