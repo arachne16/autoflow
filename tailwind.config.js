@@ -14,6 +14,7 @@ export default {
       "0.35": "0.022rem", // 0.35px
       "0.4": "0.028rem", // 0.4px
       "0.5": "0.0313rem", // 0.5px
+      "0.6": "0.038rem", // 0.6px
       "0.7": "0.044rem", // 0.7px
       "1.5": "0.0938rem", // 1.5px
       "2.4": "0.15rem", // 2.4px
@@ -34,6 +35,11 @@ export default {
     },
 
     extend: {
+
+      backgroundImage: {
+        'custom-gradient-r-to-l': 'linear-gradient(270deg, #FFF 12.06%, rgba(255, 255, 255, 0.00) 102.08%)',
+        'custom-gradient-l-to-r': 'linear-gradient(90deg, #FFF 12.06%, rgba(255, 255, 255, 0.00) 102.08%)',
+      },
 
       colors: {
         "green-200": '#CDFF05',
