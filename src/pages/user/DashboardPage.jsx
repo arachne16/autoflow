@@ -1,3 +1,4 @@
+import Headline from '@/components/dashboard/Headline'
 import RentalsSection from '@/components/dashboard/RentalsSection'
 import TotalSales from '@/components/dashboard/TotalSales'
 import BookingsThroughAutoflow from '@/components/dashboard/BookingsThroughAutoflow'
@@ -8,6 +9,7 @@ import BusinessBookings from '@/components/dashboard/BusinessBookings'
 const DashboardPage = () => {
   return (
     <div className="flex flex-col pt-18 px-30 pb-8">
+      <Headline />
       <RentalsSection />
       <div className="flex lg:flex-row flex-col gap-14 pt-14">
         <div

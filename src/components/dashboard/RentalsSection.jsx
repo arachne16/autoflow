@@ -40,23 +40,12 @@ const RentalsSection = () => {
 
   return (
     <>
-      <div className="relative mb-25 w-full flex justify-end">
-        <div className="space-x-4">
-          <button className="h-8 border border-white text-white px-4 py-1 rounded-full hover:bg-white hover:text-gray-900">
-            ADD VEHICLE
-          </button>
-          <button className="h-8 border border-white text-white px-4 py-1 rounded-full hover:bg-white hover:text-gray-900">
-            VIEW PLAN
-          </button>
-        </div>
-      </div>
-
       <section className="text-white border rounded-lg border-gray-140">
-        <div className="bg-green-200 rounded-lg-top text-black p-4 flex justify-between rounded-t-lg">
+        <div className="bg-green-200 rounded-lg-top text-black p-4 px-7 flex justify-between rounded-t-lg">
           <span className="font-semibold">My Rentals</span>
           <span>Total : 16</span>
         </div>
-        <table className="w-full table-auto text-white">
+        <table className="w-full table-auto">
           <thead>
             <tr className="text-left bg-gray-130 text-gray-110">
               <th className="p-11 pl-22">Vehicle type</th>
@@ -99,8 +88,8 @@ const RentalsSection = () => {
           </tbody>
         </table>
         <div className="px-22">
-          <div className="justify-center my-6">
-            <button className="radius-button flex items-center justify-center w-full border-2 border-white-100 rounded-full text-white-100 hover:text-black-500 hover:bg-white-100 transition">
+          <div className="justify-center my-4 mb-6">
+            <button className="w-full h-8 border px-4 py-1 rounded-full hover:bg-white-100 hover:text-black-500 leading-8">
               VIEW ALL
             </button>
           </div>

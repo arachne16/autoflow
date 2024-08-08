@@ -88,8 +88,11 @@ const Sidebar = () => {
             <li>
               <NavLink
                 to="/user/support"
-                className="flex items-center p-4 text-gray-150 hover:text-white-100"
+                className={`flex items-center p-4 text-gray-150 hover:text-white-100 ${activeClass(
+                  '/user/support'
+                )}`}
               >
+                {activeMark('/user/support')}
                 <FaTools className="mr-4" />
                 Support
               </NavLink>
@@ -97,8 +100,11 @@ const Sidebar = () => {
             <li>
               <NavLink
                 to="/user/settings"
-                className="flex items-center p-4 text-gray-150 hover:text-white-100"
+                className={`flex items-center p-4 text-gray-150 hover:text-white-100 ${activeClass(
+                  '/user/settings'
+                )}`}
               >
+                {activeMark('/user/settings')}
                 <FaCog className="mr-4" />
                 Settings
               </NavLink>
@@ -109,7 +115,7 @@ const Sidebar = () => {
 
       <div className="p-6">
         <button
-          className="radius-button flex items-center justify-center w-full border-2 border-white-100 rounded-full text-white-100 hover:text-black-500 hover:bg-white-100 transition"
+          className="w-full h-8 border px-4 py-1 rounded-full hover:text-black-500 hover:bg-white-100 leading-8"
           onClick={() => (isAuthenticated ? logoutUser() : navigate('/login'))}
         >
           LOGOUT

@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "outDir": "./dist",
+    "jsx": "preserve",
     "baseUrl": ".",
+    "allowJs": true,
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "allowUmdGlobalAccess": true
-  }
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["node_modules", "./plugins/**/*", "./typings/**/*", "./dist/**/*"]
 }
