@@ -61,6 +61,7 @@ const BusinessBookings = () => {
               type="monotone"
               dataKey="bookings"
               stroke="rgba(205, 255, 5, 1)"
+              strokeWidth={3}
               fill="url(#colorBookings)"
             />
             <XAxis dataKey="name" hide />
