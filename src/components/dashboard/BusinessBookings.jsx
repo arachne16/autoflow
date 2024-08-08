@@ -23,7 +23,7 @@ const data = [
 
 const BusinessBookings = () => {
   return (
-    <div className="flex flex-col bg-transparent p-7 pb-16 rounded-lg text-white h-full border border-gray-700">
+    <div className="flex flex-col bg-transparent p-7 pb-16 rounded-lg text-white h-full border border-gray-140">
       <div className="flex justify-between items-start mb-2">
         <div className="flex items-center text-white">
           <img

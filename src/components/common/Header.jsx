@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { FaBell } from 'react-icons/fa'
 
@@ -8,6 +9,17 @@ const Header = () => {
 
   const profileMenuRef = useRef(null)
   const notificationsRef = useRef(null)
+
+  const location = useLocation()
+  const titles = {
+    '/user/dashboard': 'Dashboard',
+    '/user/fleet': 'Fleet',
+    '/user/bookings': 'Bookings',
+    '/user/analytics': 'Analytics',
+    '/user/support': 'Support',
+    '/user/settings': 'Settings',
+  }
+  const title = titles[location.pathname] || 'Dashboard'
 
   const toggleProfileMenu = () => {
     setShowProfileMenu(!showProfileMenu)
@@ -43,7 +55,7 @@ const Header = () => {
 
   return (
     <header className="bg-black-300 border-b border-gray-140 text-white p-5 flex justify-between items-center">
-      <div className="text-xl font-semibold pl-2">Dashboard</div>
+      <div className="text-xl font-semibold pl-2">{title}</div>
       <div className="flex items-center pr-4">
         <div className="mt-2 relative" ref={notificationsRef}>
           <button

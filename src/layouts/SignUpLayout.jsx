@@ -1,9 +1,3 @@
-
 export const SignUpLayout = () => {
-  return (
-    <div>
-      SignUpLayout
-    </div>
-  )
-};
-
+  return <div>SignUpLayout</div>
+}

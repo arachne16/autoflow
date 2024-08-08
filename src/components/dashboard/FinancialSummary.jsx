@@ -21,11 +21,11 @@ const FinancialSummary = () => {
   ]
 
   return (
-    <div className="grid grid-cols-3 gap-14 h-full w-full">
+    <div className="flex gap-14 h-full text-white text-left">
       {summaries.map((summary, index) => (
         <div
           key={index}
-          className="bg-gray-finance p-14 rounded-lg text-white text-left flex flex-col justify-between"
+          className="bg-gray-finance p-14 pb-18 rounded-lg basis-1/3 flex flex-col justify-between"
         >
           {summary.icon}
           <div>

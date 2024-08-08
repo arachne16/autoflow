@@ -7,17 +7,17 @@ import BusinessBookings from '@/components/dashboard/BusinessBookings'
 
 const DashboardPage = () => {
   return (
-    <div className="pt-18 px-30 pb-8">
+    <div className="flex flex-col pt-18 px-30 pb-8">
       <RentalsSection />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 pt-14">
+      <div className="flex lg:flex-row flex-col gap-14 pt-14">
         <div
-          className="lg:col-span-1"
+          className="basis-1/3"
           style={{ height: 'calc((100vw - 360px) / 3 * 1.4)' }}
         >
           <TotalSales />
         </div>
         <div
-          className="lg:col-span-1 grid grid-rows-7 gap-14"
+          className="grid grid-rows-7 gap-14 basis-1/3"
           style={{ height: 'calc((100vw - 360px) / 3 * 1.4)' }}
         >
           <div className="row-span-2">
@@ -28,7 +28,7 @@ const DashboardPage = () => {
           </div>
         </div>
         <div
-          className="lg:col-span-1 grid grid-rows-7 gap-14"
+          className="grid grid-rows-7 gap-14 basis-1/3"
           style={{ height: 'calc((100vw - 360px) / 3 * 1.4)' }}
         >
           <div className="row-span-2">

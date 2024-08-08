@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 import Sidebar from '@/components/common/Sidebar'
 import Header from '@/components/common/Header'
@@ -13,6 +13,10 @@ const UserLayout = ({ children }) => {
       </div>
     </div>
   )
+}
+
+UserLayout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default UserLayout

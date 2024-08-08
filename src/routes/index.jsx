@@ -11,6 +11,10 @@ import UserLayout from '@/layouts/UserLayout'
 
 import DashboardPage from '@/pages/user/DashboardPage'
 import FleetPage from '@/pages/user/FleetPage'
+import BookingsPage from '@/pages/user/BookingsPage'
+import AnalyticsPage from '@/pages/user/AnalyticsPage'
+import SupportPage from '@/pages/user/SupportPage'
+import SettingsPage from '@/pages/user/SettingsPage'
 
 export const HomepageRoutes = () => {
   return (
@@ -35,10 +39,10 @@ export const UserRoutes = () => {
         <Routes>
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/fleet" element={<FleetPage />} />
-          <Route path="/bookings" element={<DashboardPage />} />
-          <Route path="/analytics" element={<DashboardPage />} />
-          <Route path="/support" element={<DashboardPage />} />
-          <Route path="/settings" element={<DashboardPage />} />
+          <Route path="/bookings" element={<BookingsPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </UserLayout>
     </AuthProvider>
