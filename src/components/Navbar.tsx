@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
+
 import { Disclosure } from '@headlessui/react'
 import {
   ArrowLeftEndOnRectangleIcon,
@@ -12,7 +13,7 @@ const navigation = [
   { name: 'Account', href: '/account' },
 ]
 
-export default function Example() {
+export default function Navbar() {
   const { isAuthenticated, logoutUser } = useAuth()
   const navigate = useNavigate()
 

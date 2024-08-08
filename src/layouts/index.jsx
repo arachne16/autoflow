@@ -1,14 +1,10 @@
-import { HomepageLayout } from './HomepageLayout' 
-import { HomepageRoutes } from '@/routes' 
+import { HomepageLayout } from './HomepageLayout'
+import { HomepageRoutes } from '@/routes'
 
-
-export const Layouts = ({
-  children
-}) => {
+export const Layouts = ({ children }) => {
   return (
     <HomepageLayout>
       <HomepageRoutes />
     </HomepageLayout>
   )
-};
-
+}
