@@ -10,9 +10,9 @@ import { FAQs } from '@/components/FAQs';
 import { GetItDone } from '@/components/GetItDone';
 import { PreFooter } from '@/components/PreFooter';
 import { Footer } from '@/components/Footer';
-import Mask1 from '@/assets/Mask_1.png';
-import Mask2 from '@/assets/Mask_2.png';
-import Mask3 from '@/assets/Mask_3.png';
+import Mask1 from '@/assets/masks/Mask_1.png';
+import Mask2 from '@/assets/masks/Mask_2.png';
+import Mask3 from '@/assets/masks/Mask_3.png';
 // import { Loader } from '@/components/Loader';
 import { Layouts } from '@/layouts';
 

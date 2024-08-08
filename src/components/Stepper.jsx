@@ -1,6 +1,23 @@
+import { Link } from "react-router-dom";
 
-
-const steps = ['signup', 'pricing', 'payment', 'activation'];
+const steps = [
+  {
+    step: 'signup',
+    path: '/sign-up'
+  },
+  {
+    step: 'pricing',
+    path: '/pricing'
+  },
+  {
+    step: 'payment',
+    path: '/payment'
+  },
+  {
+    step: 'activation',
+    path: '/activation'
+  }
+];
 
 export const Stepper = ({
   completedSteps = ['signup'],
@@ -10,15 +27,17 @@ export const Stepper = ({
     <div className='flex w-full h-auto gap-2'>
       {
         steps.map((step, index) => {
-          const completed = completedSteps.includes(step);
+          const completed = completedSteps.includes(step.step);
           return (
-            <div
+            <Link
               key={index.toString()}
-              className={`${completed ? 'text-green-200' : 'text-[#D9D9D9]'} w-[86px] cursor-pointer`}
+              to={step.path}
             >
-              <p className='capitalize '>{step}</p>
-              <div className={`w-[86px] h-[3px] ${completed ? 'bg-green-200' : 'bg-[#D9D9D9]'} rounded-[5px]`}></div>
-            </div>
+              <div className={`${completed ? 'text-green-200' : 'text-[#D9D9D9]'} w-[86px] cursor-pointer`}>
+                <p className='capitalize '>{step.step}</p>
+                <div className={`w-[86px] h-[3px] ${completed ? 'bg-green-200' : 'bg-[#D9D9D9]'} rounded-[5px]`}></div>
+              </div>
+            </Link>
           )
         })
       }

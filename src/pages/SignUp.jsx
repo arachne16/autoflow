@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Stepper } from '@/components/Stepper';
-import Mask7 from '@/assets/Mask_7.png';
+import Mask7 from '@/assets/masks/Mask_7.png';
 import VisibilityOff from '@/assets/visibility_off.png';
 import GoogleIcon from '@/assets/googleIcon.png';
 import AppleIcon from '@/assets/appleIcon.png';
