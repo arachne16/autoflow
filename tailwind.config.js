@@ -31,6 +31,12 @@ export default {
     },
 
     extend: {
+
+      backgroundImage: {
+        'custom-gradient-r-to-l': 'linear-gradient(270deg, #FFF 12.06%, rgba(255, 255, 255, 0.00) 102.08%)',
+        'custom-gradient-l-to-r': 'linear-gradient(90deg, #FFF 12.06%, rgba(255, 255, 255, 0.00) 102.08%)',
+      },
+
       colors: {
         'gray-finance': '#56586866',
         'green-200': '#CDFF05',

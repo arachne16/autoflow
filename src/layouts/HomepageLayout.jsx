@@ -1,130 +1,99 @@
-import { useState, useEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import PropTypes from 'prop-types'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
-import { fetchInitDataAsync } from '@/redux/clientReducer'
+import { Layouts } from '@/layouts'
+import { UserRoutes } from '@/routes'
 
-import { Header } from '@/components/Header'
-import { GetItDone } from '@/components/GetItDone'
-import { PreFooter } from '@/components/PreFooter'
-import { Footer } from '@/components/Footer'
-import { Spinner } from '@/components/Spinner'
-
-import Mask1 from '@/assets/Mask_1.png'
-import Mask2 from '@/assets/Mask_2.png'
-import Mask3 from '@/assets/Mask_3.png'
-import Mask4 from '@/assets/Mask_4.png'
-import Mask5 from '@/assets/Mask_5.png'
-import Mask6 from '@/assets/Mask_6.png'
-
-export const HomepageLayout = ({ children }) => {
-  const dispatch = useDispatch()
-  const [height, setHeight] = useState(5151)
-  const ref = useRef(null)
-
-  const { loadingInitData } = useSelector((state) => state.client)
-
-  useEffect(() => {
-    dispatch(fetchInitDataAsync())
-  }, [dispatch])
-
-  useEffect(() => {
-    if (ref?.current) {
-      setHeight(ref.current?.clientHeight - 1229)
-    }
-  })
-
-  if (loadingInitData) {
-    return (
-      <div className="w-full h-svh">
-        <Spinner />
-      </div>
-    )
-  }
-
+function App() {
   return (
-    <div className="relative w-full h-full font-hoves">
-      <Masks height={height} />
-      <div ref={ref} className="absolute w-full h-auto z-1">
-        <Header />
-        <div className={`max-w-1292 mx-auto pt-155 relative w-full h-auto `}>
-          {children}
-          <GetItDone />
-          <PreFooter />
-        </div>
-        <Footer />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/*" element={<Layouts />} />
+      <Route path="/user/*" element={<UserRoutes />} />
+    </Routes>
   )
 }
 
-const Masks = ({ height }) => {
-  const location = useLocation()
-  const path = location.pathname
+export default App
 
-  if (path == '/faq') {
-    return (
-      <>
-        <img
-          src={Mask4}
-          alt="mask_4"
-          className="absolute top-0 right-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center"
-        />
-        <div
-          style={{ top: height + 'px' }}
-          className={`absolute left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center overflow-hidden`}
-        >
-          <img src={Mask3} alt="mask_3" />
-        </div>
-      </>
-    )
-  }
-  if (path == '/contact') {
-    return (
-      <img
-        src={Mask5}
-        alt="mask_5"
-        className="absolute top-0 right-0 w-full h-auto z-0 max-w-full max-h-[1550px] object-cover object-center"
-      />
-    )
-  }
-  if (path == '/terms-and-conditions') {
-    return (
-      <div
-        className={`absolute top-[-100px] left-[-100px] w-full h-auto z-0 max-w-full max-h-[${height}px] object-cover object-center overflow-hidden`}
-      >
-        <img src={Mask6} alt="mask_6" />
-      </div>
-    )
-  }
+// import React, {useState, useEffect, useRef} from 'react';
+// import { Header } from '@/components/Header';
+// import { Banner } from '@/components/Banner';
+// import { Features } from '@/components/Features';
+// import { TripTracking } from '@/components/TripTracking';
+// import { ChooseAutoflow } from '@/components/ChooseAutoflow';
+// import { EverythingOnePlace } from '@/components/EverythingOnePlace';
+// import { Pricing } from '@/components/Pricing';
+// import { FAQs } from '@/components/FAQs';
+// import { GetItDone } from '@/components/GetItDone';
+// import { PreFooter } from '@/components/PreFooter';
+// import { Footer } from '@/components/Footer';
+// import Mask1 from '@/assets/Mask_1.png';
+// import Mask2 from '@/assets/Mask_2.png';
+// import Mask3 from '@/assets/Mask_3.png';
+// // import { Loader } from '@/components/Loader';
+// import { Layouts } from '@/layouts';
 
-  return (
-    <>
-      <img
-        src={Mask1}
-        alt="mask_1"
-        className="absolute top-0 left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center"
-      />
-      <img
-        src={Mask2}
-        alt="mask_2"
-        className="absolute top-2350 left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center"
-      />
-      <div
-        style={{ top: height + 'px' }}
-        className={`absolute left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center overflow-hidden`}
-      >
-        <img src={Mask3} alt="mask_3" />
-      </div>
-    </>
-  )
-}
+// function App() {
 
-HomepageLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+//   const [height, setHeight] = useState(5151)
+//   const ref = useRef(null)
 
-Masks.propTypes = {
-  height: PropTypes.number.isRequired,
-}
+//   useEffect(() => {
+//     if(ref?.current) {
+//       setHeight(ref.current?.clientHeight - 1229)
+//     }
+//   })
+
+//   return (
+//     <Layouts>
+//       {/* <Banner />
+//       <Features />
+//       <TripTracking />
+//       <ChooseAutoflow />
+//       <EverythingOnePlace />
+//       <Pricing />
+//       <FAQs /> */}
+//     </Layouts>
+//   )
+
+//   return (
+//     <div className='relative w-full h-full font-hoves'>
+//       <img
+//         src={Mask1}
+//         alt="mask_1"
+//         className='absolute top-0 left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center'
+//       />
+//       <img
+//         src={Mask2}
+//         alt="mask_2"
+//         className='absolute top-2350 left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center'
+//       />
+//       <div
+//         style={{top: height + "px"}}
+//         className={`absolute left-0 w-full h-auto z-0 max-w-full max-h-1860 object-cover object-center overflow-hidden`}
+//       >
+//         <img
+//           src={Mask3}
+//           alt="mask_3"
+//         />
+//       </div>
+//       <div ref={ref} className='absolute w-full h-auto z-1'>
+//         <Header />
+//         <div className={`max-w-1292 mx-auto pt-155 relative w-full h-auto `}>
+//           <Banner />
+//           <Features />
+//           <TripTracking />
+//           <ChooseAutoflow />
+//           <EverythingOnePlace />
+//           <Pricing />
+//           <FAQs />
+//           <GetItDone />
+//           <PreFooter />
+//         </div>
+//         <Footer />
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
